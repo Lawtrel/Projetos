@@ -4,13 +4,14 @@
 
 int main(void) 
 {
-    int a,b,soma;
-    //setlocale(LC_ALL, "Portuguese");
-    printf("A localidade corrente agora é %s \n",setlocale(LC_ALL,""));
-    printf("Digite o primeiro numero: ");
-    scanf("%d",&a);
-    printf("Digite o segundo numero: ");
-    scanf("%d",&b);
-    soma=a+b;
-    printf("A soma dos dois numeros é: %d",soma);
+	float pesoCaixa[25],pesoTotal = 0;
+	for (int i = 1; i < 25; i++)
+	{
+		printf("Digite o Peso da caixa %d: ",i);
+		scanf("%f",&pesoCaixa[i]);
+		pesoTotal += pesoCaixa[i];
+	}
+
+	printf("O peso total da caixa e: %0.2f",pesoTotal);
+	
 }
